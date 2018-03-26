@@ -1,0 +1,25 @@
+{
+  "name": "bucketlist",
+  "version": "2.0.0",
+  "description": "Bucketlist.",
+  "main": "server.js",
+  "author": "Zackarias Madsen",
+  "scripts": {
+    "start": "node server.js",
+    "devStart": "nodemon server.js",
+    "docker-start": "docker-compose up -d",
+    "docker-stop": "docker-compose stop"
+  },
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.10.8",
+    "method-override": "^2.3.10",
+    "mongo": "^0.1.0",
+    "mongodb": "^3.0.4",
+    "mongoose": "4.10.8",
+    "morgan": "^1.9.0",
+    "nodemon": "^1.17.2",
+    "rm2flash": "^1.0.3",
+    "socket.io": "^2.0.4"
+  }
+}

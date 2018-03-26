@@ -1,0 +1,95 @@
+<!doctype html>
+
+<html ng-app="rm2Todo">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Family bucketlist</title>
+
+	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
+	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+	<link rel="stylesheet" href="stylesheets/style.css">
+
+	<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.9/angular.min.js"></script>
+	<script src="https://cdn.rawgit.com/zackebth/rm2Flash/b9124c05/dist/flash.min.js"></script>
+
+	<script src="js/controllers/main.js"></script>
+	<script src="js/services/todos.js"></script>
+	<script src="js/core.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.4/socket.io.js"></script>
+
+
+</head>
+<body ng-controller="mainController">
+	<div class="container">
+		<flash-message
+			duration="2000"
+			show-close="true"
+		></flash-message>
+
+		<div class="jumbotron text-center" style="background-color: #E08257;">
+			<h1>The Family Chorse Of The Week.</h1>
+			<h2>Amount of Chores left: <span id="shadow" style="background-color:#333;" class="label label-info">{{ todos.length }}</span></h2>
+		</div>
+
+		<div id="todo-list" class="row">
+			<div class="col-sm-4 col-sm-offset-4">
+
+				<div class="checkbox" ng-repeat="todo in todos">
+					<label>
+						<input type="checkbox" ng-click="deleteTodo(todo._id)"> {{ todo.text }}
+					</label>
+
+				</div>
+
+				<p class="text-center" ng-show="loading">
+					<span class="fa fa-spinner fa-spin fa-3x"></span>
+				</p>
+
+			</div>
+		</div>
+
+		<div id="todo-form" class="row">
+			<div class="col-sm-8 col-sm-offset-2 text-center">
+				<form>
+					<div class="form-group">
+
+						<input id="shadow" type="text" class="form-control input-lg text-center" placeholder="Vaccum, Dishes, Take out trash..." ng-model="formData.text">
+					</div>
+
+					<button id="addBtn" type="submit" class="btn btn-primary btn-lg" ng-click="createTodo()">Add</button>
+				</form>
+			</div>
+		</div>
+
+	</div>
+	<div id="chat">
+
+		<section >
+			<div id="change_username" class="text-center">
+				<input id="username" type="text" class="form-control input-lg text-center" placeholder="Change name...">
+				<button id="send_username" type="submit" class="btn btn-primary btn-lg center-block" ng-click="nameChanged()">Change</button>
+			</div>
+		</section>
+
+		<section id="chatroom">
+			<section id="feedback"></section>
+		</section>
+
+		<section id="input_zone" class="text-center">
+			<input id="message" type="text" class="form-control input-lg text-center" placeholder="...">
+			<button id="send_message" type="submit" class="btn btn-primary btn-lg center-block">Send</button>
+		</section>
+
+	</div>
+
+		<div class="text-center text-muted">
+			<p>A demo by <a href="http://scotch.io">Scotch</a>.</p>
+			<p>Read the <a href="http://scotch.io/tutorials/javascript/creating-a-single-page-todo-app-with-node-and-angular">tutorial</a>.</p>
+		</div>
+
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="js/chat.js"></script>
+
+</body>
+</html>
