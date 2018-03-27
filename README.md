@@ -78,8 +78,6 @@ spend for the current state of the application.
 Instead of testing the project I would like to bring a few testing frameworks that could be used if there will be updates for
 application and code coverage would be appropriate.
 
-#### Testing
-
 ##### Testing AngularJS
 
 Why Jasmine:
