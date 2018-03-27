@@ -56,6 +56,9 @@ Here is a guide for mongodb - [Mongo](https://docs.mongodb.com/manual/installati
 2. cd rv2-project
 3. run - npm install
 
+##### Install configuration
+
+The project can be configured by changing the ports, for example
 
 #### Running the application
 
@@ -91,3 +94,19 @@ Why Mocha:
 Aswell as Jasmine, Mocha is a flexible library providing developers with just the base test structure. Functionality for assertions, spies, mocks, and the like are then added via other libraries/plugins. Mocha can be integrated with flexible 
 configuration with libraries. Mocha includes the test structure as globals, saving you time by not having to include or require it in every file. The downside is that plugins just might require you to include these anyway, leading to inconsistencies.
 
+### Continuous integration
+For this project I have only used scrutinizer which I find is a very good CI tool that covers alot of the basics, such as Code quality, Code coverage, build status and cod intelligence. For this project scrutinizer have more than enough, I only wanted Code quality and build status. Code coverage would be something to include when testing has been included in the project. And if we would use another CI tool for code coverage, it would probably be codecov. I'm very happy with the above badges.
+
+### Real time
+In this application there is a chat built in where everyone within the family are able to chat with eachother and change their
+username. When we worked through the course there was a chapter about real time where we worked with WebSockets. In that article socket.io was mentioned very fast and I got curious and wanted to try it. After i've finsied the project and finised
+the chat that is in the application I can say that I think socket.io works really well. I'm suprised of how easy it was to build a working chat which works in real time. 
+
+### Database
+This project uses mongodb as database. Using Angular and Express, using Mongoose has been very smooth. Instead of working with JSON, Mongoose works with objects from models called Schemes. I think that this structure with this database have worked really well for this project and I'm more than happy.
+
+Traditional relational databases will still have place in my heart will be used in future projects. But for a similar project like this, I would use MongoDB again. This was the first time I worked with NoSQL and It now has place besides Traditional relational databases in my heart.
+
+### Npm Module
+
+My own npm module rv2Flash has been used in this project. The module can be found here - [rv2Flash](https://www.npmjs.com/package/rm2flash?activeTab=readme). It's and module where you can use flash alerts in an angularjs project such as this. In this example it is used when loading todos, creating a todo, deleting a todo and change of username.
