@@ -63,7 +63,7 @@ Here is a guide for mongodb - [Mongo](https://docs.mongodb.com/manual/installati
 2. Start mongodb in one of them - cmd: mongod
 3. Start the applicaiton in the other window - cmd: npm start(alternative: npm run devStart)
 
-Alternative way:
+#### Alternative way:
 
 For this you need to have Docker, you can install docker from here: [Docker](https://docs.docker.com/install/)
 
