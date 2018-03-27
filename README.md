@@ -80,11 +80,16 @@ application and code coverage would be appropriate.
 
 #### Testing
 
-##### Karma
+##### Testing AngularJS
 
-Why Karma
+Why Jasmine:
+Jasmine is one of the most popular JavaScript unit testing frameworks. Jasmine basicly provides you with everthing you need. Jasmine comes with assertions, spies, and mocks, so pretty much everything you may need to start developing your unit tests. Jasmine makes the initial setup easy and you can still add libraries if you really require unit functionality. Globals make it easy to start adding tests to your app right away.
 
 #### Testing Nodejs
 
-##### Mocha and Chai
+##### Mocha
+
+Why Mocha:
+Aswell as Jasmine, Mocha is a flexible library providing developers with just the base test structure. Functionality for assertions, spies, mocks, and the like are then added via other libraries/plugins. Mocha can be integrated with flexible 
+configuration with libraries. Mocha includes the test structure as globals, saving you time by not having to include or require it in every file. The downside is that plugins just might require you to include these anyway, leading to inconsistencies.
 
