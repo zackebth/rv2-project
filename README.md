@@ -1,3 +1,4 @@
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/zackebth/rv2-project/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/zackebth/rv2-project/?branch=master)[![Build Status](https://scrutinizer-ci.com/g/zackebth/rv2-project/badges/build.png?b=master)](https://scrutinizer-ci.com/g/zackebth/rv2-project/build-status/master)[![Code Coverage](https://scrutinizer-ci.com/g/zackebth/rv2-project/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/zackebth/rv2-project/?branch=master)
 # Ramverk2 project
 
 ### Introduction
